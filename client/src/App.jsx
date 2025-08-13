@@ -57,8 +57,6 @@ const dispatch = useDispatch();
         <Route path='/event/aimemes' element={<AIMemes/>}/>
         <Route path='/event/pyit' element={<PYIT/>}/>  
         <Route path='/event/aiquiz' element={<AIQuiz/>}/>  
-
-
       </Routes>
       <AppFottor/>
     </>
