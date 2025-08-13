@@ -2,7 +2,8 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import EventNoteIcon from "@mui/icons-material/EventNote";
-import InfoIcon from "@mui/icons-material/Info"; // Added for About
+import InfoIcon from "@mui/icons-material/Info";
+import PeopleIcon from "@mui/icons-material/People";
 import PersonIcon from "@mui/icons-material/Person";
 import LoginIcon from "@mui/icons-material/Login";
 import LogoutIcon from "@mui/icons-material/Logout";
@@ -56,6 +57,7 @@ function AppBar() {
 
         <IconDisplay icon={<HomeIcon />} link="/" />
         <IconDisplay icon={<EventNoteIcon />} link="/events" />
+        <IconDisplay icon={<PeopleIcon />} link="/team" />
         <IconDisplay icon={<InfoIcon />} link="/about" />
 
         {!user ? (
