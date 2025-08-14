@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Schedule from './Schedule';
 
 function HomePage() {
   const [logoGlow, setLogoGlow] = useState(false);
@@ -136,6 +137,7 @@ function HomePage() {
             ))}
           </div>
         </div> */}
+        <Schedule/>
       </section>
 
       {/* Enhanced CSS Keyframes for Animations */}
