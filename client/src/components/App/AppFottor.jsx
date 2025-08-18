@@ -43,7 +43,7 @@ function AppFottor() {
 
           {/* Instagram Link */}
           <a
-            href="https://instagram.com/converse_2k25"
+            href="https://instagram.com/converse2k25"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-start mt-8 gap-2 text-muted-foreground hover:underline"
