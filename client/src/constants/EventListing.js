@@ -143,14 +143,14 @@ export const TeamListing = {
     slug: converse,
     image: LogoLogoHunt,
   },
-  [graphics]: {
-    name: "Graphics",
-    slug: graphics,
-    image: LogoLogoHunt,
-  },
   [web]: {
     name: "Web",
     slug: web,
+    image: LogoLogoHunt,
+  },
+  [graphics]: {
+    name: "Graphics",
+    slug: graphics,
     image: LogoLogoHunt,
   },
   [marketing]: {
