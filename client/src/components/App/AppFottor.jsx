@@ -32,13 +32,10 @@ function AppFottor() {
             Student Heads
           </h1>
           <div className="flex flex-col gap-1 text-muted-foreground">
-            <p>Ayush Polara (+91 9924012804)</p>
-            <p>Uttam Moradiya (+91 7016258764)</p>
-            <p>Shreya Chopra (+91 758831046)</p>
-            <p>Mitarsh Savaliya (+91 7567458688)</p>
-            <p>Jenish Sonani (+91 7777949735)</p>
-            <p>Harsh Maniya (+91 812879012)</p>
-            <p>Jensi Ghadiya (+91 7016954635)</p>
+            <p>Vachhani Utsav (+91 9512655868)</p>
+            <p>Vachhani Utsav (+91 9512655868)</p>
+            <p>Vachhani Utsav (+91 9512655868)</p>
+            <p>Vachhani Utsav (+91 9512655868)</p>
           </div>
 
           {/* Instagram Link */}

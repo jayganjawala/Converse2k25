@@ -35,6 +35,14 @@ function RegisterButtonFotTeam({ event, min, max }) {
       });
       return;
     }
+    if (email === user.email) {
+      toast.info("You cannot add your own email.", {
+        position: "top-right",
+        autoClose: 3000,
+        theme: "dark",
+      });
+      return;
+    }
 
     if (selectedEmailsList.includes(email)) {
       toast.info("This email is already added.", {
@@ -49,7 +57,9 @@ function RegisterButtonFotTeam({ event, min, max }) {
   };
 
   const handleRemoveEmail = (emailToRemove) => {
-    setSelectedEmailsList((prev) => prev.filter((email) => email !== emailToRemove));
+    setSelectedEmailsList((prev) =>
+      prev.filter((email) => email !== emailToRemove)
+    );
   };
 
   const handleRegister = async () => {
@@ -64,7 +74,9 @@ function RegisterButtonFotTeam({ event, min, max }) {
 
     setLoading(true);
     try {
-      const res = await dispatch(RegisterInTeam({ event, email: selectedEmailsList }));
+      const res = await dispatch(
+        RegisterInTeam({ event, email: selectedEmailsList })
+      );
 
       if (res?.success) {
         toast.success("🎉 Your Profile updated successfully !!", {
@@ -72,6 +84,7 @@ function RegisterButtonFotTeam({ event, min, max }) {
           autoClose: 5000,
           theme: "dark",
         });
+
         setTimeout(() => navigate(`/event/${event}`), 500);
       } else {
         toast.error(res?.message || "Profile Update Failed", {
@@ -91,7 +104,8 @@ function RegisterButtonFotTeam({ event, min, max }) {
     setLoading(false);
   };
 
-  const team = user?.events?.[event]?.team || user?.teams?.[event] || [];
+  const teamKey = `${event}Team`;
+  const team = user?.events?.[teamKey] || user?.teams?.[event] || [];
 
   // Already Registered
   if (user?.events?.[event]) {
@@ -101,11 +115,11 @@ function RegisterButtonFotTeam({ event, min, max }) {
           <p className="text-2xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 animate-glitchFlicker">
             Already Registered
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 mt-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:mt-6">
             <p className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 animate-glitchFlicker">
               This is Your Team:
             </p>
-            <div className="bg-gray-800/50 backdrop-blur-sm p-3 rounded-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-2 rounded-lg">
               {team.length > 0 ? (
                 <ul className="list-disc list-inside text-sm text-gray-300">
                   {team.map((member, i) => (
@@ -143,7 +157,6 @@ function RegisterButtonFotTeam({ event, min, max }) {
           </button>
         </div>
       </div>
-
     );
   }
 
@@ -186,13 +199,17 @@ function RegisterButtonFotTeam({ event, min, max }) {
       <button
         onClick={handleRegister}
         disabled={
-          loading || selectedEmailsList.length < min - 1 || selectedEmailsList.length > max
+          loading ||
+          selectedEmailsList.length < min - 1 ||
+          selectedEmailsList.length > max
         }
         className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg border-2 border-blue-700 hover:bg-blue-700 hover:border-blue-800 transition-all duration-200 disabled:opacity-50 animate-fadeIn hover:scale-105 w-full max-w-xs mx-auto"
       >
         {loading
           ? "Registering..."
-          : `Register (${selectedEmailsList.length + 1}) added · min: ${min} max: ${max}`}
+          : `Register (${
+              selectedEmailsList.length + 1
+            }) added · min: ${min} max: ${max}`}
       </button>
 
       <style>
