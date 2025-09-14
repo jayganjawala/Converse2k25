@@ -21,18 +21,36 @@ import {
   marketing,
   dec,
   nontech,
+  financial,
+  codewinglet,
+  ezholiday
 } from "../constants/eventNames";
+
+import LogoEscapeRoom from "../assets/eventLogo/nontech/escaperoom.png"
 
 import {
   LogoAiMemes,
   LogoBugBuzz,
   LogoCodathon,
-  LogoItQuiz,
+  LogoITAIQuiz,
   LogoLogoHunt,
   LogoPYIT,
-  LogoTechTussal,
   LogoWebWave,
-  LogoAiQuiz,
+  LogoPromptHunt,
+  LogoCyber,
+  LogoConverse,
+  LogoWebTeam,
+  LogoDecoration,
+  LogononTEch,
+  LogoMarketing,
+  LogoGraphics,
+  Logofinancial,
+  LogoBGMI,
+  LogoFFM,
+  LogoIPLAuction,
+  LogoMystic,
+  LogoReelCraft,
+  LogoTraitors,
 } from "../assets";
 
 export const TechEventListing = {
@@ -45,7 +63,7 @@ export const TechEventListing = {
   [itaiQuiz]: {
     name: "IT & AI Quiz",
     slug: itaiQuiz,
-    image: LogoItQuiz,
+    image: LogoITAIQuiz,
     slogan: "Think. Quiz. Win.",
   },
   [codathon]: {
@@ -57,7 +75,7 @@ export const TechEventListing = {
   [cyberSpy]: {
     name: "Cyber Spy",
     slug: cyberSpy,
-    image: LogoTechTussal,
+    image: LogoCyber,
     slogan: "Clash of Coders!",
   },
   [webWave]: {
@@ -87,7 +105,13 @@ export const TechEventListing = {
   [promptHunt]: {
     name: "Prompt Hunt",
     slug: promptHunt,
-    image: LogoAiQuiz,
+    image: LogoPromptHunt,
+    slogan: "Prompt Your Way to Glory!",
+  },
+  [codewinglet]: {
+    name: "Codewinglet",
+    slug: codewinglet,
+    image: LogoConverse,
     slogan: "Prompt Your Way to Glory!",
   },
 };
@@ -96,43 +120,49 @@ export const NonTechEventListing = {
   [bgmi]: {
     name: "BGMI",
     slug: bgmi,
-    image: LogoTechTussal,
+    image: LogoBGMI,
     slogan: "Survive. Shoot. Win.",
   },
   [reelCraft]: {
     name: "Reel Craft",
     slug: reelCraft,
-    image: LogoTechTussal,
+    image: LogoReelCraft,
     slogan: "Create. Captivate. Repeat.",
   },
   [iplAuction]: {
     name: "IPL Auction",
     slug: iplAuction,
-    image: LogoTechTussal,
+    image: LogoIPLAuction,
     slogan: "Bid Big. Win Bigger!",
   },
   [escapeRoom]: {
     name: "Escape Room",
     slug: escapeRoom,
-    image: LogoTechTussal,
+    image: LogoEscapeRoom,
     slogan: "Solve. Escape. Survive.",
   },
   [traitors]: {
     name: "TRAITORS",
     slug: traitors,
-    image: LogoTechTussal,
+    image: LogoTraitors,
     slogan: "Deceive or Be Deceived!",
   },
   [mysticMover]: {
     name: "Mystic Mover",
     slug: mysticMover,
-    image: LogoTechTussal,
+    image: LogoMystic,
     slogan: "Move with Mystery!",
   },
   [ffm]: {
     name: "FFM",
     slug: ffm,
-    image: LogoTechTussal,
+    image: LogoFFM,
+    slogan: "Fun-Filled Mayhem!",
+  },
+  [ezholiday]: {
+    name: "ezholiday",
+    slug: ezholiday,
+    image: LogoConverse,
     slogan: "Fun-Filled Mayhem!",
   },
 };
@@ -149,67 +179,71 @@ export const eventWhatsappLinks = {
   logoHunt: "https://chat.whatsapp.com/JMVUUR8J7zo2pVWSlGXT8a",
 };
 
-
 export const TeamListing = {
   [converse]: {
-    name: "Converse",
+    name: "Converse Team",
     slug: converse,
-    image: LogoLogoHunt,
+    image: LogoConverse,
+  },
+  [financial]: {
+    name: "Financial Team",
+    slug: financial,
+    image: Logofinancial,
   },
   [web]: {
-    name: "Web",
+    name: "Web Team",
     slug: web,
-    image: LogoLogoHunt,
+    image: LogoWebTeam,
   },
   [graphics]: {
-    name: "Graphics",
+    name: "Graphics Team",
     slug: graphics,
-    image: LogoLogoHunt,
+    image: LogoGraphics,
   },
   [marketing]: {
-    name: "Marketing",
+    name: "Marketing Team",
     slug: marketing,
-    image: LogoLogoHunt,
+    image: LogoMarketing,
   },
   [dec]: {
-    name: "DEC",
+    name: "Decoration Team",
     slug: dec,
-    image: LogoLogoHunt,
+    image: LogoDecoration,
   },
   [nontech]: {
-    name: "Non-Tech",
+    name: "Non-Tech Team",
     slug: nontech,
-    image: LogoLogoHunt,
+    image: LogononTEch,
   },
   [pyIt]: {
     name: "PY IT",
     slug: pyIt,
-    image: LogoLogoHunt,
+    image: LogoPYIT,
   },
   [itaiQuiz]: {
     name: "IT & AI Quiz",
     slug: itaiQuiz,
-    image: LogoLogoHunt,
+    image: LogoITAIQuiz,
   },
   [codathon]: {
     name: "Codathon",
     slug: codathon,
-    image: LogoLogoHunt,
+    image: LogoCodathon,
   },
   [cyberSpy]: {
     name: "Cyber Spy",
     slug: cyberSpy,
-    image: LogoLogoHunt,
+    image: LogoCyber,
   },
   [webWave]: {
     name: "Web Wave",
     slug: webWave,
-    image: LogoLogoHunt,
+    image: LogoWebWave,
   },
   [aiMemes]: {
     name: "AI Memes",
     slug: aiMemes,
-    image: LogoLogoHunt,
+    image: LogoAiMemes,
   },
   [logoHunt]: {
     name: "Logo Hunt",
@@ -219,11 +253,11 @@ export const TeamListing = {
   [bugBuzz]: {
     name: "Bug Buzz",
     slug: bugBuzz,
-    image: LogoLogoHunt,
+    image: LogoBugBuzz,
   },
   [promptHunt]: {
     name: "Prompt Hunt",
     slug: promptHunt,
-    image: LogoLogoHunt,
+    image: LogoPromptHunt,
   },
 };

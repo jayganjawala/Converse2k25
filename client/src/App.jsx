@@ -23,6 +23,7 @@ import ITAIQuiz from "./pages/EventDeatils/tech/ITAIQuiz.jsx";
 import PromptHunt from "./pages/EventDeatils/tech/PromptHunt.jsx";
 import AIMemes from "./pages/EventDeatils/tech/AIMemes.jsx";
 import PYIT from "./pages/EventDeatils/tech/PYIT.jsx";
+import Codewinglet from "./pages/EventDeatils/tech/Codewinglet.jsx";
 
 import BGMI from "./pages/EventDeatils/nontech/BGMI.jsx";
 import ReelCraft from "./pages/EventDeatils/nontech/ReelCraft.jsx";
@@ -31,8 +32,10 @@ import EscapeRoom from "./pages/EventDeatils/nontech/EscapeRoom.jsx";
 import Traitors from "./pages/EventDeatils/nontech/Traitors.jsx";
 import MysticMover from "./pages/EventDeatils/nontech/MysticMover.jsx";
 import FFM from "./pages/EventDeatils/nontech/FFM.jsx";
+import Ezholiday from "./pages/EventDeatils/nontech/Ezholiday.jsx";
 
 import TeamsConverse from './pages/TeamsDetails/TeamsConverse.jsx';
+import TeamsFinancial from './pages/TeamsDetails/TeamsFinancial.jsx';
 import TeamsGraphics from './pages/TeamsDetails/TeamsGraphics.jsx';
 import TeamsWeb from './pages/TeamsDetails/TeamsWeb.jsx';
 import TeamsMarketing from './pages/TeamsDetails/TeamsMarketing.jsx';
@@ -40,7 +43,7 @@ import TeamsDEC from './pages/TeamsDetails/TeamsDEC.jsx';
 import TeamsNontech from './pages/TeamsDetails/TeamsNontech.jsx';
 import TeamsLogohunt from "./pages/TeamsDetails/TeamsLogohunt.jsx";
 import TeamsBugbuzz from "./pages/TeamsDetails/TeamsBugbuzz.jsx";
-import TeamsBlindswap from "./pages/TeamsDetails/TeamsBlindswap.jsx";
+import TeamsCodathon from "./pages/TeamsDetails/TeamsCodathon.jsx";
 import TeamsWebwave from "./pages/TeamsDetails/TeamsWebwave.jsx";
 import TeamsCyberspy from "./pages/TeamsDetails/TeamsCyberspy.jsx";
 import TeamsItaiquiz from "./pages/TeamsDetails/TeamsItaiquiz.jsx";
@@ -82,6 +85,7 @@ function App() {
         <Route path="/event/prompthunt" element={<PromptHunt />} />
         <Route path="/event/aimemes" element={<AIMemes />} />
         <Route path="/event/pyit" element={<PYIT />} />
+        <Route path="/event/codewinglet" element={<Codewinglet />} />
 
         {/* Non Tech Event Page */}
         <Route path="/event/bgmi" element={<BGMI />} />
@@ -91,9 +95,11 @@ function App() {
         <Route path="/event/traitors" element={<Traitors />} />
         <Route path="/event/mysticmover" element={<MysticMover />} />
         <Route path="/event/ffm" element={<FFM />} />
+        <Route path="/event/ezholiday" element={<Ezholiday />} />
 
         {/* Teams Section */}
         <Route path="/team/converse" element={<TeamsConverse />} />
+        <Route path="/team/financial" element={<TeamsFinancial />} />
         <Route path="/team/graphics" element={<TeamsGraphics />} />
         <Route path="/team/web" element={<TeamsWeb />} />
         <Route path="/team/marketing" element={<TeamsMarketing />} />
@@ -101,7 +107,7 @@ function App() {
         <Route path="/team/nontech" element={<TeamsNontech />} />
         <Route path="/team/logohunt" element={<TeamsLogohunt />} />
         <Route path="/team/bugbuzz" element={<TeamsBugbuzz />} />
-        <Route path="/team/blindswap" element={<TeamsBlindswap />} />
+        <Route path="/team/codathon" element={<TeamsCodathon />} />
         <Route path="/team/webwave" element={<TeamsWebwave />} />
         <Route path="/team/cyberspy" element={<TeamsCyberspy />} />
         <Route path="/team/itaiquiz" element={<TeamsItaiquiz />} />
