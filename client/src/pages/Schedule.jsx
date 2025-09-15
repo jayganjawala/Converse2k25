@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 
 const Schedule = () => {
-  // Schedule data
+  // Adjusted schedule data
   const schedule = [
     {
       day: 'Friday, 19th September, 2025',
       events: [
         { time: '8:30 am - 10:00 am', event: 'Inauguration Ceremony', location: 'Outside Lab 1' },
         { time: '10:00 am - 10:45 am', event: 'IT & AI Quiz', location: 'Lab 1,2,3' },
-        { time: '11:00 am - 11:45 pm', event: 'Logo Hunt', location: 'Lab 1,2,4,5' },
-        { time: '12:00 am - 1:00 pm', event: 'CodeWinglet (Round 1)', location: 'Lab 3,4,5' },
-        { time: '12:00 am - 12:30 pm', event: 'Prompt Hunt (Round 1)', location: 'Lab 1,2' },
-        { time: '12:45 pm - 1:15 pm', event: 'Cyber Spy (Round 1)', location: 'Lab 1,2' },
+        { time: '11:00 am - 11:45 am', event: 'Logo Hunt', location: 'Lab 1,2,4,5' },
+        { time: '12:00 pm - 12:30 pm', event: 'Prompt Hunt (Round 1)', location: 'Lab 1,2' },
+        { time: '12:30 pm - 1:15 pm', event: 'Cyber Spy (Round 1)', location: 'Lab 1,2' },
         { time: '1:15 pm - 1:45 pm', event: 'Lunch Break', location: '' },
         { time: '1:45 pm - 2:45 pm', event: 'PY-IT (Round 1)', location: 'Lab 1,2,3' },
         { time: '2:00 pm - 4:00 pm', event: 'CodeWinglet (Round 2)', location: 'Lab 4,5' },
@@ -21,13 +20,13 @@ const Schedule = () => {
     {
       day: 'Saturday, 20th September, 2025',
       events: [
-        { time: '9:00 am - 9:30 am', event: 'Ai-Memes (Round 1)', location: 'Lab 1,2,3' },
+        { time: '9:00 am - 9:30 am', event: 'AI-Memes (Round 1)', location: 'Lab 1,2,3' },
         { time: '9:30 am - 10:15 am', event: 'AI-Memes (Round 2)', location: 'Lab 1,2,3' },
         { time: '10:30 am - 11:30 am', event: 'Bug Buzz (Round 1 and Round 2)', location: 'Lab 1,2,4' },
         { time: '10:30 am - 11:30 am', event: 'PY-IT (Round 2)', location: 'Lab 3' },
         { time: '11:30 am - 12:30 pm', event: 'Web Wave', location: 'Lab 4,5' },
         { time: '11:30 am - 12:30 pm', event: 'PY-IT (Round 3)', location: 'Lab 3' },
-        { time: '12:30 pm - 1:30 pm', event: 'Prompt Hunt(Round 2)', location: 'Lab 1,2' },
+        { time: '12:30 pm - 1:30 pm', event: 'Prompt Hunt (Round 2)', location: 'Lab 1,2' },
         { time: '12:30 pm - 1:30 pm', event: 'Cyber Spy (Round 2)', location: 'Lab 4,5' },
         { time: '1:30 pm - 2:00 pm', event: 'Lunch Break', location: '' },
         { time: '2:30 pm - 4:00 pm', event: 'Valedictory, Prize & Certificate distribution', location: '' },
@@ -63,25 +62,7 @@ const Schedule = () => {
           <h2 className="animate-glitchFlicker text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300">
             {day.day}
           </h2>
-          <table className="schedule-table">
-            <thead>
-              <tr>
-                <th>Time</th>
-                <th>Event</th>
-                <th>Location</th>
-              </tr>
-            </thead>
-            <tbody>
-              {day.events.map((event, idx) => (
-                <tr key={idx} className="animate-fadeIn">
-                  <td>{event.time}</td>
-                  <td>{event.event}</td>
-                  <td>{event.location}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <div className="navigation-buttons flex justify-between mt-6">
+          <div className="navigation-buttons flex justify-between mb-6">
             <button
               onClick={handlePrevious}
               disabled={currentDay === 0}
@@ -97,6 +78,24 @@ const Schedule = () => {
               Next Day
             </button>
           </div>
+          <table className="schedule-table">
+            <thead>
+              <tr>
+                <th style={{ width: '30%' }}>Time</th>
+                <th style={{ width: '40%' }}>Event</th>
+                <th style={{ width: '30%' }}>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              {day.events.map((event, idx) => (
+                <tr key={idx} className="animate-fadeIn">
+                  <td>{event.time}</td>
+                  <td>{event.event}</td>
+                  <td>{event.location}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
       <style>
@@ -159,12 +158,16 @@ const Schedule = () => {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
             overflow: hidden;
+            table-layout: fixed; /* Ensures columns maintain fixed widths */
           }
           .schedule-table th,
           .schedule-table td {
             padding: 12px;
             text-align: left;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            word-wrap: break-word; /* Prevents text overflow */
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
           .schedule-table th {
             background: linear-gradient(to right, #4a148c, #1a0033);
